@@ -31,7 +31,7 @@ body {
 
 .intro {
   text-align: center;
-  max-width: 610px;
+  max-width: 38rem;
   margin: 0 auto;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .introButtons {
-  margin-top: 2rem;
+  margin-inline-start: 2rem;
   width: 100%;
   gap: 1.5rem;
   display: flex;
@@ -192,7 +192,7 @@ text-align: center;
 
 
 footer{
-    background-color: var(--color-background-footer);
+    background-color: #e4e5e7;
     color: var(--color-neutral-gray1);
     margin-top: 4rem;
     display: grid;
@@ -340,17 +340,17 @@ footer{
   margin: 0 0 0.5rem;
 }
 
+footer p {
+  margin: 0;
+}
+
 footer > div:not(.iconFooter) {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-}
-
-footer p {
   margin: 0;
 }
-
 .iconFooter {
   margin-top: 0.5rem;
 }
