@@ -1,0 +1,364 @@
+:root {
+  --color-primary-green: hsl(171, 66%, 44%);
+  --color-primary-blue: hsl(233, 100%, 69%);
+  --color-neutral-gray1: hsl(210, 10%, 33%);
+  --color-neutral-gray2: hsl(201, 11%, 66%);
+  --Font-family-body: "Bai Jamjuree", sans-serif;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--Font-family-body);
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  margin: 0;
+}
+
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 90px;
+  height: auto;
+  margin-top: 2%;
+}
+
+.intro {
+  text-align: center;
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.intro p {
+  color: var(--color-neutral-gray2);
+}
+
+.introButtons {
+  margin-top: 2rem;
+  width: 100%;
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introButtons .btn1 {
+  color: white;
+  border: 0;
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  font-family: var(--Font-family-body);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--color-primary-green);
+  border: none;
+  box-shadow:
+    inset 0 -3px 0 rgb(0 0 0 / 15%),
+    0 8px 14px rgb(38 186 164 / 30%);
+}
+
+.introButtons .btn2 {
+  color: white;
+  border: 0;
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  font-family: var(--Font-family-body);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--color-primary-blue);
+  box-shadow:
+    inset 0 -3px 0 rgb(0 0 0 / 15%),
+    0 8px 14px rgb(38 186 164 / 30%);
+}
+
+.feactures {
+  display: block;
+  margin-top: 5rem;
+  background-color: white;
+}
+
+.feactures h2 {
+  text-align: center;
+}
+
+.feactures p {
+  color: var(--color-neutral-gray2);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.feacturesContent {
+  margin-top: 4rem;
+  display: flex;
+  text-align: start;
+}
+.feacturesText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  text-align: start;
+}
+.feacturesText p {
+  color: var(--color-neutral-gray2);
+  text-align: left;
+  max-width: 400px;
+  margin: 0;
+}
+
+.feacturesText h3 {
+  margin: 0 0 0.5rem;
+}
+.feactures img {
+  width: 600px;
+}
+
+.feacturesTextContent {
+  margin-bottom: 4rem;
+}
+
+.accessContent{
+   text-align: center;
+   margin-top: 4rem;
+}
+
+.accessContent p {
+    color: var(--color-neutral-gray2);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.accessClipboard img{
+  width: 570px;
+  margin: 4rem  auto 0;
+  display: block;
+}
+
+.clipboardAdvantageTitle{
+text-align: center;
+   margin-top: 4rem;
+}
+
+.clipboardAdvantageTitle p{
+ color: var(--color-neutral-gray2);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.clipboardAdvantageContent{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin-top: 4rem;
+   margin-left: 70px;
+   margin-right: 70px;
+   gap: 2rem;
+}
+
+.clipboardAdvantageContent p{
+ color: var(--color-neutral-gray2);
+}
+
+.clipboardAdvantageContentCard{
+  max-width: 500px;
+}
+
+.clipboardAdvantageContentCard p{
+  max-width: 310px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.companiesIMG {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  width: min(100% - 3rem, 1100px);
+  margin: 4rem auto;
+}
+
+.companiesIMG img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+footer{
+    background-color: #e4e5e7;
+    color: var(--color-neutral-gray1);
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0, 1fr));
+    align-items: start;
+    width: 100%;
+}
+
+.logoFooter{
+  display: block;
+  width: 45px;
+  height: auto;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.iconFooter{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+   align-self: center;
+}
+
+.iconFooter img{
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Movil */
+@media (max-width: 375px) {
+  body {
+    background-image: url("./images/bg-header-mobile.png");
+    background-size: 100% auto;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .intro p {
+    max-width: 345px;
+    margin: 0 auto;
+  }
+
+  .introButtons {
+    flex-direction: column;
+  }
+
+  .introButtons button {
+    width: 88%;
+    box-sizing: border-box;
+  }
+
+  .feacturesContent {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .feacturesContent {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feactures img {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .feacturesText {
+    margin-top: 4rem;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .feacturesText p {
+    color: var(--color-neutral-gray2);
+    max-width: 330px;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  
+  .accessContent h2{
+    max-width: 330px;
+  }
+  .accessContent p {
+    color: var(--color-neutral-gray2);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.accessClipboard img{
+    
+  width: 300px;
+  margin: 4rem  auto 0;
+  display: block;
+}
+
+
+.clipboardAdvantageTitle h2{
+  max-width: 300px;
+  margin: 0 auto 0.75rem;
+}
+
+.clipboardAdvantageContent{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 4rem 1.5rem 0;
+}
+
+.clipboardAdvantageContentCard{
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.clipboardAdvantageTitle p {
+  max-width: 300px;
+}
+
+.clipboardAdvantageContentCard p {
+  max-width: 270px;
+}
+
+.companiesIMG {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 5rem auto;
+}
+
+footer{
+  background-color: #e4e5e7;
+  color: var(--color-neutral-gray1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 1rem 3rem;
+}
+
+.logoFooter {
+  margin: 0 0 0.5rem;
+}
+
+footer > div:not(.iconFooter) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.iconFooter {
+  margin-top: 0.5rem;
+}
+}

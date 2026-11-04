@@ -6,6 +6,7 @@ export default function Home() {
      
       <Link href="/challenges/qr-component-main/index.html">QR</Link>
       <Link href="/challenges/fylo-dark-theme-landing-page-master/index.html">Pag oscuro</Link>
+      <Link href="/challenges/clipboard-landing-page-master/index.html">Pagina de portapapeles</Link>
 
     </div>
   );

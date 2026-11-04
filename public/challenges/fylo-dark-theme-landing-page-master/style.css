@@ -36,6 +36,10 @@ body {
 
 }
 
+body {
+  font-size: 14px;
+}
+
 header {
   margin-top: 2%;
   padding: 0 30px;
