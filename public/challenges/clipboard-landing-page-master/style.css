@@ -4,6 +4,7 @@
   --color-neutral-gray1: hsl(210, 10%, 33%);
   --color-neutral-gray2: hsl(201, 11%, 66%);
   --Font-family-body: "Bai Jamjuree", sans-serif;
+  --color-background-footer: #e4e5e7;
   --sombraButton: inset 0 -3px 0 rgb(0 0 0 / 15%),
     0 8px 14px rgb(38 186 164 / 30%);
 
@@ -23,9 +24,9 @@ body {
 .logo {
   display: block;
   margin: 0 auto;
-  width: 90px;
+  width: 5.625rem;
   height: auto;
-  margin-top: 2%;
+  margin-block-start: 2%;
 }
 
 .intro {
@@ -191,7 +192,7 @@ text-align: center;
 
 
 footer{
-    background-color: #e4e5e7;
+    background-color: var(--color-background-footer);
     color: var(--color-neutral-gray1);
     margin-top: 4rem;
     display: grid;
