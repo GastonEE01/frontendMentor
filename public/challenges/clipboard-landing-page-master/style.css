@@ -4,10 +4,13 @@
   --color-neutral-gray1: hsl(210, 10%, 33%);
   --color-neutral-gray2: hsl(201, 11%, 66%);
   --Font-family-body: "Bai Jamjuree", sans-serif;
+  --sombraButton: inset 0 -3px 0 rgb(0 0 0 / 15%),
+    0 8px 14px rgb(38 186 164 / 30%);
+
 }
 
 body {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: var(--Font-family-body);
   background-image: url("./images/bg-header-desktop.png");
   background-repeat: no-repeat;
@@ -46,31 +49,26 @@ body {
 
 .introButtons .btn1 {
   color: white;
-  border: 0;
+  border: none;
   padding: 1rem 3rem;
   border-radius: 25px;
   font-family: var(--Font-family-body);
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   background-color: var(--color-primary-green);
-  border: none;
-  box-shadow:
-    inset 0 -3px 0 rgb(0 0 0 / 15%),
-    0 8px 14px rgb(38 186 164 / 30%);
+  box-shadow: var(--sombraButton);
 }
 
 .introButtons .btn2 {
   color: white;
-  border: 0;
+  border: none;
   padding: 1rem 3rem;
   border-radius: 25px;
   font-family: var(--Font-family-body);
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   background-color: var(--color-primary-blue);
-  box-shadow:
-    inset 0 -3px 0 rgb(0 0 0 / 15%),
-    0 8px 14px rgb(38 186 164 / 30%);
+  box-shadow: var(--sombraButton);
 }
 
 .feactures {
@@ -171,7 +169,7 @@ text-align: center;
 .clipboardAdvantageContentCard p{
   max-width: 310px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -225,7 +223,7 @@ footer{
 
 
 /* Movil */
-@media (max-width: 375px) {
+@media (max-width: 23.4375rem) {
   body {
     background-image: url("./images/bg-header-mobile.png");
     background-size: 100% auto;
@@ -250,15 +248,9 @@ footer{
   }
 
   .feacturesContent {
+    margin-top: 4rem;
     flex-direction: column;
     text-align: center;
-    margin-top: 2rem;
-  }
-
-  .feacturesContent {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
   }
 
   .feactures img {
