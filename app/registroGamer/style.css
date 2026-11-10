@@ -1,0 +1,559 @@
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("./assets/fonts/orbitron/static/orbitron-800.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/jetbrains-mono/static/jetbrains-mono-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.registration-layout {
+  overflow-x: clip;
+}
+
+
+
+:root{
+    --family-Orbitron: "Orbitron", sans-serif;
+    --family-JetBrains: "JetBrains Mono", monospace;
+
+    --color-neutral-50: hsl(204 60% 97%);
+    --color-neutral-100: hsl(208 49% 92%);
+    --color-neutral-300: hsl(211 18% 68%);
+    --color-neutral-400: hsl(211 13% 55%);
+    --color-neutral-500: hsl(211 14% 50%);
+    --color-neutral-600: hsl(210 18% 42%);
+    --color-neutral-700: hsl(211 22% 24%);
+    --color-neutral-800: hsl(211 30% 13%);
+    --color-neutral-900: hsl(210 39% 7%);
+    --color-neutral-950: hsl(214 37% 4%);
+    
+    --linea-amarilla: hsl(77 90% 59%);
+    --linea-naranja: hsl(77 67% 39%);
+
+    --rojo: hsl(4 100% 74%);
+    --amber: hsl(40 100% 65%);
+    --navy:  hsl(214 60% 2%);
+
+    --lime-alpha-60: hsl(77 90% 59% / 0.6);
+    --lime-alpha-40: hsl(77 90% 59% / 0.4);
+    --navy-alpha-80: hsl(214 60% 2% / 0.8);
+    --navy-alpha-60: hsl(214 60% 2% / 0.6);
+    
+}
+
+/* Preset 1 */
+.MuiTypography-root.text-preset-1 {
+  font-family: var(--family-Orbitron);
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.MuiTypography-root.text-preset-2 {
+  font-family: var(--family-Orbitron);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.MuiTypography-root.text-preset-3 {
+  font-family: var(--family-Orbitron);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.MuiTypography-root.text-preset-4 {
+  font: 400 16px/24px var(--family-JetBrains);
+}
+
+.MuiTypography-root.text-preset-5 {
+  font: 400 14px/24px var(--family-JetBrains);
+}
+
+.MuiTypography-root.text-preset-5-bold {
+  font: 700 14px/24px var(--family-JetBrains);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.MuiTypography-root.text-preset-6 {
+  font: 400 12px/16px var(--family-JetBrains);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.MuiTypography-root.text-preset-7 {
+  font: 400 12px/16px var(--family-JetBrains);
+}
+
+.logo{
+  display: block;
+  width: 169px;
+  height: auto;
+}
+
+.hero-title::before {
+  content: "//";
+  margin-right: 0.16em;
+  color: var(--linea-amarilla);
+  letter-spacing: -0.12em;
+}
+
+.hero-divider {
+  display: block;
+  width: 100%;
+  margin-top: 4rem;
+  border-bottom: 1px solid var(--color-neutral-700);
+}
+
+.intro-column {
+  position: relative;
+}
+
+.operator-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "operator-id ready"
+    "callsign callsign"
+    "status status";
+  align-items: center;
+  margin-top: 24px;
+}
+
+.operator {
+  display: contents;
+}
+
+.operator-id {
+  grid-area: operator-id;
+}
+
+.operator-ready {
+  grid-area: ready;
+  text-align: right;
+}
+
+.operator-callsign {
+  grid-area: callsign;
+  min-height: 48px;
+}
+
+.operator-status-list {
+  grid-area: status;
+}
+
+.verifyRegister{
+  margin-top: 4rem;
+}
+
+.contentState{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.dots-line {
+  flex-grow: 1;          /* Se estira para ocupar todo el espacio del centro */
+  border-bottom: 2px dotted var(--color-neutral-700); /* Línea de puntos gris oscuro */
+  margin-bottom: 3px;    /* Ajusta la altura de la línea respecto al texto */
+}
+.input{
+  width: 100%;
+}
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-neutral-400);
+  font: 400 12px/16px var(--family-JetBrains);
+}
+
+.input-error-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--rojo);
+}
+
+.input-error-message img {
+  flex: 0 0 auto;
+}
+
+.input .MuiOutlinedInput-root {
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-100);
+}
+
+.input .MuiOutlinedInput-input {
+  color: var(--color-neutral-100);
+}
+
+.input .MuiOutlinedInput-input::placeholder {
+  color: var(--color-neutral-400);
+  opacity: 1;
+}
+
+.input .MuiOutlinedInput-notchedOutline {
+  border: 2px solid var(--color-neutral-500);
+}
+
+.input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-neutral-300);
+}
+
+.input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--linea-amarilla);
+}
+
+.input .MuiFormHelperText-root {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 4px;
+}
+
+.input .MuiFormHelperText-root .input-error-message {
+  display: flex;
+  align-items: center;
+}
+
+.formTitle{
+  display: flex;
+  justify-content: space-between;
+  height: 2.25rem;
+}
+
+.registration-card {
+  position: relative;
+  z-index: 1;
+}
+
+.registration-visual {
+  position: relative;
+  z-index: 0;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.registration-backdrop {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -400px;
+  width: 900px;
+  max-width: none;
+  height: auto;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.registration-card::before,
+.registration-card::after {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  content: "";
+  pointer-events: none;
+}
+
+.registration-card::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--linea-amarilla);
+  border-left: 2px solid var(--linea-amarilla);
+}
+
+.registration-card::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid var(--linea-amarilla);
+  border-bottom: 2px solid var(--linea-amarilla);
+}
+
+.terms-control {
+  margin: 8px 0 16px;
+}
+
+.terms-error {
+  display: flex;
+  margin-top: -1.5rem;
+}
+
+
+.terms-copy {
+  color: var(--color-neutral-300);
+  font: 400 14px/24px var(--family-JetBrains);
+}
+
+.terms-link {
+  color: var(--linea-amarilla);
+  text-decoration: underline;
+}
+
+.log-in{
+ color: var(--linea-amarilla);
+ text-decoration: underline;
+ margin-left: 10px;
+}
+
+.registration-form .MuiTypography-root.login-prompt {
+  margin: 24px 0 16px;
+  text-align: center;
+}
+
+.password-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.password-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.password-meta .field-hint {
+  margin-top: 4px;
+}
+
+.field-error {
+  color: var(--rojo);
+}
+
+.password-strength-label {
+  margin-top: 4px;
+  font: 400 12px/16px var(--family-JetBrains);
+  letter-spacing: 0.12em;
+}
+
+.strength-label-1 {
+  color: var(--rojo);
+}
+
+.strength-label-2 {
+  color: var(--amber);
+}
+
+.strength-label-3 {
+  color: var(--linea-amarilla);
+}
+
+.strength-label-4 {
+  color: var(--linea-amarilla);
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-neutral-700);
+}
+
+.strength-1 .strength-bar.active {
+  background: var(--rojo);
+}
+
+.strength-2 .strength-bar.active {
+  background: var(--amber);
+}
+
+.strength-3 .strength-bar.active,
+.strength-4 .strength-bar.active {
+  background: var(--linea-amarilla);
+}
+
+.registration-submit.MuiButton-root {
+  min-height: 48px;
+  border-radius: 0;
+  background-color: var(--linea-amarilla);
+  color: var(--color-neutral-900);
+  font-family: var(--family-Orbitron);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.16em;
+  margin-top: 1.5rem;
+}
+
+
+.registration-submit.MuiButton-root:hover {
+  background-color: var(--linea-amarilla);
+  filter: brightness(1.08);
+}
+
+.registration-card-state {
+  display: flex;
+  min-height: 620px;
+  align-items: center;
+}
+
+.registration-result {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.registration-success > img {
+  margin-bottom: 20px;
+}
+
+.success-title {
+  color: var(--color-neutral-100);
+}
+
+.success-title::before {
+  content: "// ";
+  color: var(--linea-amarilla);
+}
+
+.success-message {
+  margin-top: 12px;
+  color: var(--color-neutral-300);
+  font: 400 14px/24px var(--family-JetBrains);
+}
+
+.success-message span {
+  color: var(--linea-amarilla);
+}
+
+.registration-success .registration-submit {
+  margin-top: 24px;
+}
+
+.registration-submitting {
+  align-items: center;
+  text-align: center;
+}
+
+.transmission-loader {
+  width: 100%;
+  height: 4px;
+  margin-top: 28px;
+  overflow: hidden;
+  background-color: var(--color-neutral-700);
+}
+
+.transmission-loader span {
+  display: block;
+  width: 35%;
+  height: 100%;
+  background-color: var(--linea-amarilla);
+  animation: transmission-progress 1s ease-in-out infinite alternate;
+}
+
+.imgTextField{
+  margin-right: 5px;
+}
+@keyframes transmission-progress {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(185%);
+  }
+}
+
+@media (max-width: 375px) {
+  .registration-layout {
+    gap: 16px;
+  }
+
+  .brand-row {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+  }
+
+  .MuiTypography-root.text-preset-1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .operator-summary {
+    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-areas: "operator-id callsign";
+    column-gap: 12px;
+    margin-top: 16px;
+  }
+
+  .operator-ready {
+    position: absolute;
+    top: 8px;
+    right: 0;
+  }
+
+  .operator-id.MuiTypography-root {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .operator-callsign.MuiTypography-root {
+    min-height: 0;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  .formTitle {
+    height: auto;
+    min-height: 2.25rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .formTitle .MuiTypography-root {
+    margin: 0;
+    font-size: 10px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .operator-status-list {
+    display: none;
+  }
+
+  .registration-backdrop {
+    display: none;
+  }
+
+  .registration-card-state {
+    min-height: 400px;
+  }
+
+  .success-title.MuiTypography-root {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transmission-loader span {
+    animation: none;
+    width: 100%;
+  }
+}
